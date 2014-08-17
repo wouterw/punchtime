@@ -15,6 +15,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'trello': {
+          name: 'Typework Punchtime',
+          apiKey: '10e7fc51b697f1217f842bb0ff4a6435',
+          scope: 'read',
+          expiration: 'never'
+        }
+      }
     }
   };
 
