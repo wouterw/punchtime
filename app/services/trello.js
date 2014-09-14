@@ -13,8 +13,8 @@ function getAccessToken() {
 function urlFor() {
   var args = [].slice.call(arguments);
 
-  var resource = 'https://api.trello.com/1' + args.shift() +
-    '?key=' + getApiKey() + '&token=' + getAccessToken();
+  var s = args.shift(), key = getApiKey(), token = getAccessToken();
+  var resource = `https://api.trello.com/1${s}?key=${key}&token=${token}`;
 
   return String.prototype.fmt.apply(resource, args);
 }
