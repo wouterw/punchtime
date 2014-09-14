@@ -1,5 +1,5 @@
 export default {
-  name: 'services',
+  name: 'trello-service',
   initialize: function(container, application){
     application.inject('route', 'trello', 'service:trello');
   }
