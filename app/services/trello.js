@@ -2,7 +2,7 @@ import Ember from 'ember';
 import { request } from 'ic-ajax';
 
 function getApiKey() {
-  return Ember.get(window.PunchtimeENV, 'torii.providers.trello.apiKey');
+  return Ember.get(window.EmberENV, 'torii.providers.trello.apiKey');
 }
 
 function getAccessToken() {

@@ -14,14 +14,13 @@
   </head>
   <body>
     <script>
-      window.PunchtimeENV = {{ENV}};
-      window.EmberENV = window.PunchtimeENV.EmberENV;
-      window.ENV = { torii: window.PunchtimeENV.torii };
+      window.EmberENV = {{EMBER_ENV}};
+      window.ENV = { torii: window.EmberENV.torii };
     </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/punchtime.js"></script>
     <script>
-      window.Punchtime = require('punchtime/app')['default'].create(PunchtimeENV.APP);
+      window.Punchtime = require('punchtime/app')['default'].create({{APP_CONFIG}});
     </script>
   </body>
 </html>
