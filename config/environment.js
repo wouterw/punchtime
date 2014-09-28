@@ -21,7 +21,7 @@ module.exports = function(environment) {
     torii: {
       sessionServiceName: 'session',
       providers: {
-        'trello': {
+        trello: {
           name: 'Typework Punchtime',
           apiKey: '10e7fc51b697f1217f842bb0ff4a6435',
           scope: 'read',

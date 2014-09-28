@@ -1,8 +1,9 @@
 import Ember from 'ember';
 import { request } from 'ic-ajax';
+import config from 'punchtime/config/environment';
 
 function getApiKey() {
-  return Ember.get(window.EmberENV, 'torii.providers.trello.apiKey');
+  return config.torii.providers.trello.apiKey;
 }
 
 function getAccessToken() {
