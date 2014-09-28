@@ -7,12 +7,12 @@ export default Ember.Route.extend({
 
   actions: {
     signIn: function() {
-      var controller = this.controller;
+      var route = this;
 
       this.get('session').open('trello').then(function() {
-        // authenticated
-      }).catch(function(error) {
-        controller.set('error', error);
+        route.wuphf.success('You\'ve been successfully signed in!');
+      }).catch(function() {
+        route.wuphf.danger('Failed to sign in!');
       });
     },
 
@@ -20,6 +20,7 @@ export default Ember.Route.extend({
       var route = this;
       this.get('session').close().then(function() {
         route.transitionTo('index');
+        route.wuphf.success('You\'ve been signed out!');
       });
     }
   }
