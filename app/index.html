@@ -8,19 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
+    {{CONFIG_META}}
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/punchtime.css">
   </head>
   <body>
-    <script>
-      window.EmberENV = {{EMBER_ENV}};
-      window.ENV = { torii: window.EmberENV.torii };
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/punchtime.js"></script>
-    <script>
-      window.Punchtime = require('punchtime/app')['default'].create({{APP_CONFIG}});
-    </script>
   </body>
 </html>
