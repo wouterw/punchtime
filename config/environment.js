@@ -18,6 +18,15 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' localhost:35729",
+      'font-src': "'self'",
+      'connect-src': "'self' https://api.trello.com",
+      'img-src': "'self'",
+      'style-src': "'self'"
+    },
+
     torii: {
       sessionServiceName: 'session',
       providers: {
